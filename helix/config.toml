@@ -11,6 +11,7 @@ soft-wrap.enable = true
 soft-wrap.wrap-at-text-width = true
 text-width = 80
 rulers = [80]
+smart-tab.enable = false
 
 [editor.cursor-shape]
 insert = "bar"
