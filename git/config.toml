@@ -1,6 +1,7 @@
 [user]
-email = "123149780+chariotsofiron@users.noreply.github.com"
-username = "chariotsofiron"
+email = "ben@benburk.me"
+username = "benburk"
+name = "Ben Burk"
 
 [init]
 defaultBranch = "main"
