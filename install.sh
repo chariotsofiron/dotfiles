@@ -30,7 +30,7 @@ ln -sf "$dotfiles/helix/languages.toml" "$HOME/.config/helix/languages.toml"
 
 # alacritty
 mkdir -p "$HOME/.config/alacritty"
-ln -sf "$dotfiles/alacritty/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
+ln -sf "$dotfiles/alacritty/alacritty.toml" "$HOME/.config/alacritty/alacritty.toml"
 
 # kitty
 mkdir -p "$HOME/.config/kitty"

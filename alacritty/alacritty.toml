@@ -1,0 +1,7 @@
+import = [
+  "~/atlas/repos/dotfiles/alacritty/catppuccin-frappe.toml"
+]
+
+[window]
+option_as_alt = "OnlyLeft"
+
