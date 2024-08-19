@@ -25,8 +25,10 @@ ln -sf "$dotfiles/git/ignore" "$HOME/.ignore"
 
 # helix
 mkdir -p "$HOME/.config/helix"
+mkdir -p "$HOME/.config/helix/themes"
 ln -sf "$dotfiles/helix/config.toml" "$HOME/.config/helix/config.toml"
 ln -sf "$dotfiles/helix/languages.toml" "$HOME/.config/helix/languages.toml"
+ln -sf "$dotfiles/helix/catppuccin_frappe_no_bg.toml" "$HOME/.config/helix/themes/catppuccin_frappe_no_bg.toml"
 
 # alacritty
 mkdir -p "$HOME/.config/alacritty"

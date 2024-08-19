@@ -4,4 +4,5 @@ import = [
 
 [window]
 option_as_alt = "OnlyLeft"
+opacity = 0.99
 
