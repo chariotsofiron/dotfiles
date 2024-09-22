@@ -1,5 +1,8 @@
 #!/usr/bin/env fish
 
+# bind \e\[1\;9D beginning-of-line # Command + Left
+# bind \e\[1\;9C end-of-line # Command + Right
+
 fish_add_path --move /usr/local/bin
 fish_add_path --move /usr/local/opt/fzf/bin
 fish_add_path --move $HOME/.cargo/bin
@@ -10,9 +13,9 @@ set -gx OPENAI_API_KEY (
 
 if status is-interactive
     set fish_greeting # Suppress fish welcome message
-    fish_config theme choose "catppuccin-frappe"
-    fish_config prompt choose "Arrow"
-    
+    fish_config theme choose catppuccin-frappe
+    fish_config prompt choose Arrow
+
     set -gx EDITOR hx
 
     set -gx FZF_DEFAULT_COMMAND "fd --type f"
@@ -23,5 +26,5 @@ if status is-interactive
 
     # https://github.com/kovidgoyal/kitty/issues/268
     alias clear="printf '\033[2J\033[3J\033[1;1H'"
+    alias timestamp="$HOME/atlas/repos/dotfiles/scripts/timestamp.py"
 end
-
