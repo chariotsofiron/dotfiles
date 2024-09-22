@@ -4,5 +4,11 @@ import = [
 
 [window]
 option_as_alt = "OnlyLeft"
-opacity = 0.99
+opacity = 0.999
+# decorations = "Buttonless"  # remove title bar
 
+[keyboard]
+bindings = [
+  { key = "Left",  mods = "Command", chars = "\u001bOH" },
+  { key = "Right", mods = "Command", chars = "\u001bOF" },
+]
