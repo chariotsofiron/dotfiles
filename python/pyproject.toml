@@ -1,16 +1,24 @@
 [tool.ruff]
+line-length = 80
+
+[tool.ruff.lint]
 select = ["ALL"]
 ignore = [
-    "T201", # print
-    "D213", # multi-line-summary-second-line
-    "D203", # one-blank-line-before-class
-    "D401", # first line of docstring should be in imperative mood
-    "INP001", # implicit namespace package
-
-    # disabled to make formatter happy
-    "COM812", # missing-trailing-comma
-    "ISC001", # single-line-implicit-string-concatenation
-    "FA102", # import annotations
+  "ANN101",  # missing-type-self
+  "D213",    # multi-line-summary-second-line
+  "D401",    # imperative mood
+  "FA102",   # future-required-type-annotation
+  "S603",    # subprocess-without-shell-equals-true #4045
+  "RET504",  # unnecessary assign to clipboard
+  "S101",    # allow asserts, used for tests
+  "S311",    # suspicious-non-cryptographic-random-usage
+  "T201",    # print found
+  "FBT003",  # boolean positional value in function call
+  # formatting
+  "COM812",  # trailing comma missing
+  "D203",    # one-blank-line-before-class
+  "D213",    # multi-line-summary-second-line
+  "ISC001",  # single-line-implicit-string-concatenation
 ]
 
 [tool.ruff.format]
@@ -18,3 +26,8 @@ skip-magic-trailing-comma = true
 
 [tool.ruff.lint.isort]
 split-on-trailing-comma = false
+
+
+[tool.pytest.ini_options]
+python_files = ["*.py"]  # search for tests in all python files
+
