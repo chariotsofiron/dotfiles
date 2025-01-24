@@ -1,14 +1,17 @@
 #!/usr/bin/env fish
 
-# bind \e\[1\;9D beginning-of-line # Command + Left
-# bind \e\[1\;9C end-of-line # Command + Right
-
 fish_add_path --move /usr/local/bin
 fish_add_path --move /usr/local/opt/fzf/bin
 fish_add_path --move $HOME/.cargo/bin
 
 set -gx OPENAI_API_KEY (
     security find-generic-password -a "$USER" -s "OPENAI_API_KEY" -w
+)
+set -gx ANTHROPIC_API_KEY (
+    security find-generic-password -a "$USER" -s "ANTHROPIC_API_KEY" -w
+)
+set -gx GEMINI_API_KEY (
+    security find-generic-password -a "$USER" -s "GEMINI_API_KEY" -w
 )
 
 if status is-interactive
@@ -24,7 +27,7 @@ if status is-interactive
     set -gx FZF_ALT_C_COMMAND "fd --type d"
     set -gx FZF_ALT_C_OPTS "--preview 'tree -C {}'"
 
-    # https://github.com/kovidgoyal/kitty/issues/268
-    alias clear="printf '\033[2J\033[3J\033[1;1H'"
-    alias timestamp="$HOME/atlas/repos/dotfiles/scripts/timestamp.py"
+    # # https://github.com/kovidgoyal/kitty/issues/268
+    # alias clear="printf '\033[2J\033[3J\033[1;1H'"
+    # alias timestamp="$HOME/atlas/repos/dotfiles/scripts/timestamp.py"
 end

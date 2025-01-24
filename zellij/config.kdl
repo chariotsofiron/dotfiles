@@ -20,6 +20,6 @@ keybinds {
         bind "Alt Down" { MoveFocus "Down"; }
         bind "Alt Up" { MoveFocus "Up"; }
         bind "Alt m" { ToggleFloatingPanes; }
-
+        unbind "Alt m"
     }
 }

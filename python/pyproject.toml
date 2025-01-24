@@ -4,7 +4,6 @@ line-length = 80
 [tool.ruff.lint]
 select = ["ALL"]
 ignore = [
-  "ANN101",  # missing-type-self
   "D213",    # multi-line-summary-second-line
   "D401",    # imperative mood
   "FA102",   # future-required-type-annotation

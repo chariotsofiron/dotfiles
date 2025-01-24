@@ -20,6 +20,17 @@ This repository contains the configuration files for the tools and applications 
 - bulk rename [edir](https://github.com/bulletmark/edir)
 
 
+## API keys
+
+1. add api key to keychain
+2. add to fish config:
+```fish
+set -gx OPENAI_API_KEY (
+    security find-generic-password -a "$USER" -s "OPENAI_API_KEY" -w
+)
+```
+
+
 ## Install
 
 ```fish
